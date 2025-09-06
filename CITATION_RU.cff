@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "Если вы используете эту работу, пожалуйста, цитируйте её так:"
+title: "Гипотеза вероятностного поля: Спектральная космология нулевого уровня энтропии (ZFSC)"
+authors:
+  - family-names: Монахов
+    given-names: Евгений
+    affiliation: "LLC VOSCOM ONLINE Research Initiative"
+    orcid: "https://orcid.org/0009-0003-1773-5476"
+date-released: 2025-09-06
+license: MIT
+repository-code: "https://github.com/jacomoterr/Zero-Field-Spectral-Cosmology-ZFSC-theory"
+keywords:
+  - Гипотеза вероятностного поля
+  - Нулевая энтропия
+  - Амплитуды и вероятностные поля
+  - Возникновение пространства-времени
+  - Энтропийная динамика
+  - Свёрнутые и развёрнутые моды
+  - Эмергентные взаимодействия
