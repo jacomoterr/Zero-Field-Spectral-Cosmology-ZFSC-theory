@@ -1,0 +1,394 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[russian,english]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{bm}
+
+\geometry{margin=2.5cm}
+
+\title{Zero-field Spectral Cosmology. Theory}
+\author{Evgeny Monakhov \\ VOSCOM ONLINE LLC Research Initiative \\ \href{https://orcid.org/0009-0003-1773-5476}{ORCID: 0009-0003-1773-5476}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+A hypothesis is proposed that physical space-time and interactions emerge from a more fundamental probabilistic field existing at zero entropy level. In this state, there are no space or time, only amplitudes and probabilistic fields representing potential configurations of all possible energies and interactions. Basic postulates are formulated, preliminary mathematical relations are provided, and a research plan is outlined to align this model with known physical laws and constants.
+\end{abstract}
+
+\section{Introductory Intuition and ZFSC Postulates}
+
+\subsection{Postulate 1: Zero Entropy Level}
+The existence of a fundamental pre-geometric level is assumed, where classical distances, spatial and temporal dimensions are absent, and entropy approaches zero:
+\[
+S \to 0.
+\]
+Formally, the initial state is represented by a pure quantum state \(\rho\) on a probabilistic-amplitude structure \(\mathcal H\) with zero entropy:
+\[
+S(\rho) = -\mathrm{Tr}\,(\rho \ln \rho) = 0.
+\]
+At this level, the Universe is described by a pure probabilistic field of amplitudes:
+\[
+\Psi = \sum_{i} a_i |i\rangle ,
+\]
+where \(\{|i\rangle\}\) are potential configurations (space, energy, interactions), and \(a_i \in \mathbb{C}\) are their amplitudes.
+
+\begin{itemize}
+    \item Denote the Hilbert space of ``potential states'' as \(\mathcal{H}\).
+    \item On \(\mathcal{H}\), a \textbf{self-adjoint operator} (observable) is defined:
+    \[
+    \boxed{\Lambda = L + M} \tag{1}
+    \]
+    where \(L\) is the ``intra-sector'' part (local connections), and \(M\) is the ``inter-sector'' connections (mixing).
+\end{itemize}
+
+\textbf{Physical Meaning.} The spectrum \(\{\lambda_k^{\rm eff}\}\) of the operator \(\Lambda\) encodes potential ``frequencies'' \(\tilde{\omega}_k\) of elementary \textbf{modes}, from which particles, fields, and geometry later emerge.
+
+\subsection{Eigenmodes and Basic Formulas}
+\[
+\Lambda \mathbf{v}_k = \lambda_k^{\rm eff} \mathbf{v}_k, \qquad
+\tilde{\omega}_k \equiv \sqrt{\lambda_k^{\rm eff}} \ (\ge 0). \tag{2}
+\]
+
+\begin{itemize}
+    \item \(\mathbf{v}_k\) — eigenvector (form of the ``mode'').
+    \item \(\lambda_k^{\rm eff} \ge 0\) — eigenvalue (square of the ``frequency'').
+    \item \(\tilde{\omega}_k\) — effective ``frequency'' of the mode.
+\end{itemize}
+
+\textbf{Particle Masses.}
+\[
+\boxed{m_k = \frac{\hbar}{c^2} \tilde{\omega}_k = \frac{\hbar}{c^2} \sqrt{\lambda_k^{\rm eff}}} \tag{3}
+\]
+\begin{itemize}
+    \item \(\hbar\) — reduced Planck constant.
+    \item \(c\) — speed of light in vacuum.
+\end{itemize}
+
+\textbf{Mixing (PMNS/CKM).}
+\[
+\boxed{U_{\alpha i} \sim \langle \alpha | \mathbf{v}_i \rangle} \tag{4}
+\]
+\begin{itemize}
+    \item \(|\alpha\rangle\) — basis of ``flavors/sectors'' (electronic, muonic, etc.).
+    \item Overlaps of eigenvectors yield \textbf{mixing angles} and \textbf{CP phase}.
+\end{itemize}
+
+\section{Emergent Geometry: How Time and Space ``Arise''}
+
+\subsection{Spectral Transition (ZFST): ``Great Unfolding''}
+\textbf{Transition Hypothesis.} The ``Big Bang'' is replaced by a \textbf{zero-field spectral transition (ZFST)} — a rapid regime of increasing connectivity and the emergence of non-zero entropy \(S\).
+
+Introduce ``proto-time'' \(\tau\) — a parameter of spectrum evolution under the influence of a \textbf{gradient flow} (minimization of ``spectral action''):
+\[
+\frac{d\Lambda}{d\tau} = -\frac{\delta \mathcal{S}_{\rm spec}}{\delta \Lambda}, \qquad
+\mathcal{S}_{\rm spec} = \mathrm{Tr}\, f\left( \frac{\Lambda}{\Lambda_*} \right). \tag{5}
+\]
+\begin{itemize}
+    \item \(f\) — a positive decaying function (e.g., a smoothed spectrum cutoff).
+    \item \(\Lambda_*\) — cutoff scale (Planck order).
+    \item \textbf{Meaning:} The system ``decomposes'' high and low modes into a structure with minimal ``spectral action''.
+\end{itemize}
+
+\textbf{Emergent Physical Time.}
+\[
+\boxed{t(\tau) = \int^{\tau} \zeta \big( S(\tau') \big) \, d\tau', \quad \zeta' > 0} \tag{6}
+\]
+\begin{itemize}
+    \item \(\zeta(S)\) — monotonic ``clock speed'': while \(S \approx 0\), physical time ``almost stands still''; as \(S\) grows, clocks ``turn on''.
+\end{itemize}
+
+\subsection{Spectral Gap and Scale Factor}
+Define the \textbf{first non-zero gap}:
+\[
+\lambda_1(\tau) = \min \{ \lambda_k^{\rm eff}(\tau) > 0 \}, \qquad
+\xi(\tau) \sim \frac{1}{\sqrt{\lambda_1(\tau)}}. \tag{7}
+\]
+\begin{itemize}
+    \item \(\xi\) — correlation length (size of coherence regions).
+    \item \textbf{Assumption:} Scale factor \(a \propto \xi\):
+    \[
+    \boxed{a(\tau) \propto \frac{1}{\sqrt{\lambda_1(\tau)}}} \ \Rightarrow \
+    H \equiv \frac{\dot{a}}{a} = -\frac{1}{2} \frac{\dot{\lambda}_1}{\lambda_1}. \tag{8}
+    \]
+\end{itemize}
+If during the ZFST phase \(\lambda_1(\tau)\) decreases \textbf{exponentially},
+\[
+\lambda_1(t) = \lambda_1(0) \, e^{-2Ht} \ \Rightarrow \ a(t) \propto e^{Ht}, \tag{9}
+\]
+we obtain \textbf{inflation without an inflaton}: accelerated expansion is pure spectral dynamics.
+
+\subsection{Vacuum Energy and Entropic Suppression}
+Effective ``vacuum'' density from the zero-point energies of modes (with entropic weighting):
+\[
+\boxed{\rho_{\rm vac}(S,a) = \frac{\hbar}{2 V(a)} \sum_k \tilde{\omega}_k \, F \big( \tilde{\omega}_k, S \big) \, \Theta \big( k_c(a) - k \big)} \tag{10}
+\]
+\begin{itemize}
+    \item \(V(a) \propto a^3\) — volume;
+    \item \(\frac{\hbar}{2} \tilde{\omega}_k\) — zero-point energy of the mode;
+    \item \(F(\tilde{\omega},S) \in [0,1]\) — \textbf{entropic suppression factor} for high frequencies as \(S\) grows;
+    \item \(\Theta\) — window function with a ``sliding'' cutoff \(k_c(a)\) (cosmological co-moving scale).
+\end{itemize}
+
+\textbf{Physics:} As long as the sum changes weakly \(\Rightarrow w = p/\rho \approx -1\), inflation proceeds; as suppression factors ``turn off,'' inflation stops, and energy redistributes into \textbf{localized modes} (reheating).
+
+\subsection{Spectral Dimension and Phased Unfolding 1D \(\to\) 3D}
+\textbf{Spectral dimension} \(d_s\) is introduced via the heat trace:
+\[
+K(s) = \mathrm{Tr} \, e^{-s \Lambda} \ \sim \ \frac{1}{(4\pi s)^{d_s/2}} \quad (s \to 0^+). \tag{11}
+\]
+\begin{itemize}
+    \item During ZFST, a stage with \(d_s \simeq 1\) (quasi-linear connection chains) is possible, then through the flow (5), the network gains \textbf{three equivalent ``directions''} of connectivity \(\Rightarrow d_s \to 3\).
+\end{itemize}
+
+\textbf{Why exactly 3D + time?}  
+(Minimality Hypothesis.) Configurations with \(d_s = 1\) are unstable (too small correlation volumes), while \(d_s \ge 4\) are spectrally ``expensive'' (many high modes without sufficient suppression). The minimum ``spectral action'' is achieved with \textbf{three} nearly equal orthogonal connections — i.e., 3D.
+
+\textbf{Where do other dimensions ``reside''?}  
+In blocks of \(\Lambda\) with \textbf{large gaps} (\(\lambda_{\rm compact} \gg \lambda_1\)) — their correlation lengths are microscopic, remaining \textbf{compactified}. Their contribution to \(\rho_{\rm vac}\) is suppressed by \(F(\tilde{\omega},S)\), but they:
+\begin{itemize}
+    \item shift gauge constants (through integration of high modes),
+    \item introduce small corrections to masses/mixing,
+    \item may produce weak ``hidden'' interactions.
+\end{itemize}
+
+\section{Masses, Generations, and Mixing}
+
+\subsection{``Generation Ladder''}
+Empirically, each family exhibits three hierarchical levels. ZFSC models this as a ``ladder'':
+\[
+\boxed{\mu = \{0, \varepsilon, c \varepsilon \}, \qquad
+m_i^2 \propto \lambda_0 + \mu_i} \tag{12}
+\]
+\begin{itemize}
+    \item \(\lambda_0 \ge 0\) — base level shift (common ``background'' of the sector);
+    \item \(\varepsilon > 0\) — step;
+    \item \(c > 1\) — \textbf{hierarchy ratio} (key characteristic of the family).
+\end{itemize}
+
+\textbf{From two masses \(\to c\).}  
+For example, for leptons (order \(e \to \mu \to \tau\)):
+\[
+c_\ell = \frac{m_\tau^2 - m_e^2}{m_\mu^2 - m_e^2} \approx 2.828 \times 10^2. \tag{13}
+\]
+For neutrinos (in terms of differences): \(c_\nu = \frac{\Delta m_{31}^2}{\Delta m_{21}^2} \approx 34\).
+
+\subsection{Micro-model of ``Generations'': Matrix \(B(\delta,r,\dots)\)}
+Minimal 3×3 version:
+\[
+\boxed{
+B(\delta,r;g_L) = \begin{pmatrix}
+0 & g_L & 0 \\
+g_L & \delta & r \\
+0 & r & 0
+\end{pmatrix}, \quad
+\mathrm{spec}(B) = \left\{ 0, \ \frac{\delta \pm \sqrt{\delta^2 + 4(g_L^2 + r^2)}}{2} \right\}
+} \tag{14}
+\]
+\begin{itemize}
+    \item \(\delta\) — ``central shift'' (asymmetry of the central node);
+    \item \(r\) — right ``shoulder'' connection channel; \(g_L\) — left channel.
+\end{itemize}
+
+For sorted levels \((\lambda_{\min} < \lambda_{\mathrm{mid}} < \lambda_{\max})\) and \(\lambda_{\mathrm{mid}} = 0\) (as in (14)), the ``ladder'' ratio is:
+\[
+\boxed{
+c = \frac{\lambda_{\max} - \lambda_{\min}}{\lambda_{\mathrm{mid}} - \lambda_{\min}}
+= \frac{2 \sqrt{\delta^2 + 4(g_L^2 + r^2)}}{\sqrt{\delta^2 + 4(g_L^2 + r^2)} - \delta}
+} \tag{15}
+\]
+and in the large \(\delta\) regime:
+\[
+\boxed{c \approx \frac{\delta^2}{g_L^2 + r^2} + 2} \quad (\delta^2 \gg g_L^2 + r^2). \tag{16}
+\]
+\textbf{Meaning:} Large hierarchies \(c\) naturally arise with a large central shift \(\delta\) and a narrow ``bottleneck'' of connections (small \(g_L, r\)).
+
+\textbf{6×6 and Asymmetries.} In practice, we use an extended 6×6 matrix with edges \(g_L, g_R\) and asymmetries \(h_{1,2,3}\), which allows:
+\begin{itemize}
+    \item supporting different hierarchies in sectors (\(\nu, \ell, u, d\));
+    \item introducing \textbf{common parameters} (unification) and testing predictiveness.
+\end{itemize}
+
+\subsection{Prediction of Light Mass from Two Heavy Ones}
+If the ladder is \(\{0, 1, c\}\) and we identify \(\mu \to 1\), \(\tau \to c\), then:
+\[
+s^2 = \frac{m_\tau^2 - m_\mu^2}{c - 1}, \qquad
+\boxed{m_{\rm light}^2 = m_\mu^2 - s^2} \tag{17}
+\]
+\begin{itemize}
+    \item \(s^2\) — overall ``scale'' of the sector;
+    \item \textbf{Important:} Here, \(c\) is \textbf{predicted} by the model (from the spectrum of \(B\)), not calculated from three masses (otherwise, it is an identity, not a prediction).
+\end{itemize}
+
+\section{Gravity and Curvature from the Spectrum}
+
+\subsection{Heuristic for \(G\)}
+The total ``stiffness'' of the vacuum, composed of all modes:
+\[
+\boxed{\frac{1}{G_{\rm eff}} \sim \sum_k \hbar \tilde{\omega}_k W_k} \tag{18}
+\]
+\begin{itemize}
+    \item \(W_k\) — weight depending on the structure of modes and suppression (analogous to ``spectral action'').
+\end{itemize}
+Idea: The more high-frequency modes are involved (considering \(F(\tilde{\omega}, S)\)), the greater the ``elasticity'' of the geometry (smaller \(G\)).
+
+\subsection{Contribution of a Single Mode to Curvature}
+In the linear regime:
+\[
+\boxed{
+\delta R_{\mu\nu}^{(k)} \simeq \frac{8\pi G}{c^4} T_{\mu\nu}^{(k)}, \qquad
+T_{\mu\nu}^{(k)} \propto m_k u_\mu u_\nu
+} \tag{19}
+\]
+\begin{itemize}
+    \item \(u_\mu\) — 4-velocity of the mode carrier;
+    \item \(m_k\) from (3); collectively, \(\sum_k \delta R_{\mu\nu}^{(k)}\) forms the observed curvature.
+\end{itemize}
+This links \textbf{masses} and \textbf{curvature} as two sides of the same spectral ``mechanism'' \(\Lambda\).
+
+\section{Dark Energy and ``Why It Is Small''}
+
+\subsection{Vacuum Formula and Suppression}
+Returning to (10): a small \(\rho_\Lambda\) is ensured by:
+\begin{itemize}
+    \item suppression of \(F(\tilde{\omega}, S)\) for ``compact'' high modes (blocks with large \(\lambda\));
+    \item a ``sliding'' cutoff \(k_c(a)\), reducing the ultraviolet contribution as \(a\) grows.
+\end{itemize}
+
+\textbf{Effective Equation of State.}
+\[
+w + 1 \simeq -\frac{d \ln \rho_{\rm vac}}{d \ln a} \simeq -\frac{d \ln F}{d \ln a} \quad (\text{small}). \tag{20}
+\]
+A \(w \approx -1\) with a tiny drift is expected — a cosmologically testable trace.
+
+\section{Why 1D \(\to\) 3D, Not Other Dimensions, and ``Where They Reside''}
+
+\begin{enumerate}
+    \item \textbf{1D Stage.} At the onset of ZFST, the connection network is ``thin,'' the spectral gap \(\lambda_1\) is large, \(d_s \approx 1\). The scale \(a \propto 1/\sqrt{\lambda_1}\) grows exponentially (9).
+    \item \textbf{Transition to 3D.} The minimum of \(\mathcal{S}_{\rm spec}\) is achieved with three nearly equivalent ``directions'' of connectivity (entropic efficiency): \(d_s \to 3\).
+    \item \textbf{Why not 4D?} For \(d_s \ge 4\), the characteristic spectrum \(\rho(\lambda)\) produces too strong an ultraviolet contribution without sufficient suppression by \(F\), making \(\rho_{\rm vac}\) unstable/too large (heuristically: ``expensive'' in spectral action).
+    \item \textbf{Other dimensions} remain in ``compact'' blocks of \(\Lambda\) with large gaps \(\lambda_{\rm compact}\):
+    \begin{itemize}
+        \item correlation length \(\xi_{\rm compact} \sim 1/\sqrt{\lambda_{\rm compact}}\) is microscopic;
+        \item their contribution to observable dynamics occurs through \textbf{renormalization of constants}, small shifts in masses/mixing, and \(\rho_\Lambda\).
+    \end{itemize}
+\end{enumerate}
+
+\section{Computational Program and Testable Consequences}
+
+\subsection{Generation Matrices and Coefficient \(c\)}
+We use matrices \(B(\delta, r; g_L, g_R, h_{1,2,3})\) of size 3, 4, or 6. In the simplest 3×3 case, \(c\) is given by (15)–(16); in 6×6 — numerically based on three \textbf{fixed levels} (it is important not to select the triplet for a target, otherwise hidden fitting occurs).
+
+\textbf{Practical Rule (Fairness):}
+\begin{itemize}
+    \item Choose one triplet rule (e.g., ``three lowest levels'') and \textbf{do not change it} across sectors;
+    \item In unification regimes, \(c\) is \textbf{predicted}, not fitted.
+\end{itemize}
+
+\subsection{Prediction of Light Masses}
+For leptons:
+\[
+m_e^{\rm pred} = \sqrt{m_\mu^2 - \frac{m_\tau^2 - m_\mu^2}{c_\ell^{\rm pred} - 1}}, \tag{21}
+\]
+where \(c_\ell^{\rm pred}\) is extracted from the spectrum of \(B\) in the same \textbf{unification regime} as for neutrinos, quarks, etc. Similarly, predictions for light quarks (\(u,d\)) can be constructed from \((c,s,t)\) or \((d,s,b)\).
+
+\subsection{Toolkit}
+\begin{itemize}
+    \item \textbf{Regimes:} \texttt{independent\_all}, \texttt{shared\_r\_all}, \texttt{shared\_delta\_all}, \texttt{full\_unify\_all}, \texttt{grand\_unify\_all}, \texttt{grand\_unify\_all\_scaled}.
+    \item \textbf{Breakthrough Criteria:} In strict regimes (\texttt{full\_unify\_all}), simultaneously:
+    \begin{itemize}
+        \item \(z_\nu \lesssim 2\sigma\) (for \(c_\nu\)),
+        \item \(z_e \lesssim 2\sigma\) (for \(m_e^{\rm pred}\) with 1\% model \(\sigma\)),
+        \item and global \(z \lesssim 2\sigma\).
+    \end{itemize}
+    \item \textbf{Technical Notes:}
+    \begin{itemize}
+        \item Do not use \(c_\ell^{\rm exp}\) during optimization if the goal is to \textbf{predict} \(m_e\);
+        \item The choice of level triplet is \textbf{fixed} (e.g., ``three lowest'');
+        \item Quark masses should be compared at a fixed \(\overline{\rm MS}\)-scale.
+    \end{itemize}
+\end{itemize}
+
+\section{ZFSC Equation Set (Minimal ``System'' with Comments)}
+
+\begin{enumerate}
+    \item \textbf{Eigenmodes:} \(\Lambda \mathbf{v}_k = \lambda_k^{\rm eff} \mathbf{v}_k\).
+    \item \textbf{Mode Mass:} \(m_k = \frac{\hbar}{c^2} \sqrt{\lambda_k^{\rm eff}}\).
+    \item \textbf{Mixing:} \(U_{\alpha i} \sim \langle \alpha | \mathbf{v}_i \rangle\).
+    \item \textbf{Ladder:} \(\mu = \{0, \varepsilon, c \varepsilon \}\), \(m_i^2 \propto \lambda_0 + \mu_i\).
+    \item \textbf{Hierarchy Coefficient (3×3):} \(c = \frac{2 \sqrt{\delta^2 + 4(g_L^2 + r^2)}}{\sqrt{\delta^2 + 4(g_L^2 + r^2)} - \delta} \simeq \frac{\delta^2}{g_L^2 + r^2} + 2\).
+    \item \textbf{Light Mass Prediction:} \(m_{\rm light}^2 = m_\mu^2 - (m_\tau^2 - m_\mu^2)/(c - 1)\).
+    \item \textbf{Entropic Dynamics:} \(\frac{d \Lambda}{d \tau} = -\frac{\delta \mathcal{S}_{\rm spec}}{\delta \Lambda}\), \(t(\tau) = \int \zeta(S) \, d\tau\).
+    \item \textbf{Gap–Scale Factor:} \(a \propto 1/\sqrt{\lambda_1}\), \(H = -\frac{1}{2} \frac{\dot{\lambda}_1}{\lambda_1}\).
+    \item \textbf{Vacuum Energy:} \(\rho_{\rm vac} = \frac{\hbar}{2 V} \sum_k \tilde{\omega}_k F(\tilde{\omega}_k, S) \Theta(k_c - k)\).
+    \item \textbf{Gravitational ``Stiffness'':} \(G_{\rm eff}^{-1} \sim \sum \hbar \tilde{\omega}_k W_k\).
+    \item \textbf{Linear Gravity of a Mode:} \(\delta R_{\mu\nu}^{(k)} \simeq \frac{8 \pi G}{c^4} T_{\mu\nu}^{(k)}\).
+    \item \textbf{Spectral Dimension:} \(K(s) = \mathrm{Tr} \, e^{-s \Lambda} \sim (4 \pi s)^{-d_s/2}\).
+\end{enumerate}
+
+Each coefficient:
+\begin{itemize}
+    \item \(\hbar, c\) — fundamental constants (scale the ``frequency \(\to\) mass'' connection).
+    \item \(\delta, r, g_L, g_R, h_{1,2,3}\) — \textbf{connection geometry} in the pre-geometric network (determine the spectrum shape and, consequently, \(c\), masses, and mixing).
+    \item \(\varepsilon, \lambda_0\) — ``step'' and base shift in the ladder approximation of levels.
+    \item \(F(\tilde{\omega}, S)\), \(k_c(a)\) — phenomenological suppressions of UV contributions (entropy and scale), subject to calibration.
+    \item \(W_k\) — weight of mode contribution to the ``stiffness'' of geometry (depends on spectral action normalization).
+\end{itemize}
+
+\section{Observable Consequences and Tests}
+
+\begin{enumerate}
+    \item \textbf{Neutrino Hierarchies:} \(c_\nu\) is large (\(\sim 34\)), robust to details; range of \(m_{\beta\beta}\) for \(0\nu\beta\beta\) (small, \(\sim\) meV).
+    \item \textbf{Leptons:} Prediction of \(m_e\) from \((\mu, \tau)\) with \textbf{common} parameters \(B\) with neutrinos (via shared regimes).
+    \item \textbf{Gauge Constants:} Through substructures of \(\Lambda\) — possibility to relate phenomenological constants to the ``average connectivity'' of subgraphs (general spectral action logic).
+    \item \textbf{Inflation:} Small tensor signal \(r\) and weak running, expressed through \(d \ln \lambda_1 / dt\).
+    \item \textbf{Dark Energy:} \(w \approx -1\) with a micro-drift \(w + 1 \sim -d \ln F / d \ln a\).
+    \item \textbf{Unseen Dimensions:} The absence of unfolding of other dimensions manifests as \textbf{small but collective} corrections to masses and constants.
+\end{enumerate}
+
+\section{Research Roadmap}
+
+\begin{itemize}
+    \item \textbf{(A)} Fix the architecture of \(B\) (small number of parameters) and \textbf{one rule} for triplet selection.
+    \item \textbf{(B)} Calibrate \textbf{minimally} (e.g., \(\Delta m^2\) for \(\nu\) and \(\mu, \tau\) for \(\ell\)), \textbf{predict} the rest (\(m_e\), \(m_{\beta\beta}\), PMNS/CKM angles, \(m_W/m_Z\)).
+    \item \textbf{(C)} Compute \(\chi^2\), \textbf{z-scores} for independent observables, \textbf{Global z} accounting for the number of parameters.
+    \item \textbf{(D)} Check stability against variations in ranges/grids (without ``hidden triplet fitting'').
+    \item \textbf{(E)} If necessary, add \textbf{one} new handle (e.g., weak asymmetry) — and retest predictiveness.
+\end{itemize}
+
+\section{Conclusion}
+
+ZFSC offers a unified picture where a \textbf{single spectrum} \(\Lambda = L + M\) on a zero-probabilistic field sequentially generates:
+
+\begin{itemize}
+    \item \textbf{masses} (through \(\sqrt{\lambda_k^{\rm eff}}\)),
+    \item \textbf{mixing} (through eigenvectors),
+    \item \textbf{gravity} (through the total ``stiffness'' of modes),
+    \item \textbf{inflation} (through the exponential fall of the spectral gap),
+    \item \textbf{small dark energy} (entropic suppression of zero modes),
+    \item \textbf{3D space + time} (from spectral minimality),
+    \item and leaves ``other dimensions'' in compact blocks of \(\Lambda\), where they subtly influence constants.
+\end{itemize}
+
+\begin{verbatim}
+@misc{prob_field_hypothesis_en_2025,
+  author       = {Evgeny Monakhov and VOSCOM ONLINE LLC Research Initiative},
+  title        = {Zero-field Spectral Cosmology. Theory.},
+  year         = {2025},
+  publisher    = {Zenodo},
+  orcid        = {0009-0003-1773-5476},
+  url_orcid    = {https://orcid.org/0009-0003-1773-5476},
+  organization = {https://voscom.online/}
+}
+\end{verbatim}
+
+\end{document}
