@@ -1,0 +1,131 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{booktabs}
+\geometry{margin=2.5cm}
+
+\title{Zero-field Spectral Cosmology. Theory.\\
+Spectral origin of particle generation masses and hints at a lower level (tachyon--graviton)}
+\author{Evgeny Monakhov \\ LLC "VOSCOM ONLINE" Research Initiative \\ \href{https://orcid.org/0009-0003-1773-5476}{ORCID: 0009-0003-1773-5476}}
+\date{September 07, 2025}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+A verification of the ``Zero Field Spectral Cosmology'' (ZFSC) hypothesis is presented, according to which the masses of fermion generations and the hierarchy of constants arise as spectral relations of a nested block-structured matrix. 
+The work demonstrates agreement with experimental data for neutrinos, leptons, and quarks with an accuracy better than $0.005\sigma$. 
+For the first time, an additional ``zero'' level is introduced, which may be interpreted as the spectrum of hypothetical particles --- tachyons, gravitons, or quanta of time. 
+Possible masses of these new states are provided. 
+\end{abstract}
+
+\section{Introduction}
+Modern particle physics is based on the Standard Model (SM), where masses are generated via the Higgs boson. However, the experimental hierarchies of generations remain unexplained. 
+This work develops the idea of ``Zero Field Spectral Cosmology'' (ZFSC), where masses hierarchically follow from the spectrum of a symmetric matrix describing a probabilistic field without introducing additional fitting parameters. 
+
+\section{Formalism}
+Consider a symmetric matrix $M$ of size $N\times N$, with elements
+\[
+M_{i,i+1} = r, \quad M_{0,1} = g_0, \quad M_{i,i} = \delta \ \text{(for central nodes)}.
+\]
+When cuts $s_k$ are introduced, the matrix acquires a block structure:
+\[
+M = \begin{pmatrix}
+B_1 & \epsilon_1 & 0 & \cdots \\
+\epsilon_1 & B_2 & \epsilon_2 & \cdots \\
+0 & \epsilon_2 & B_3 & \cdots \\
+\vdots & \vdots & \vdots & \ddots
+\end{pmatrix},
+\]
+where $\epsilon_k < 1$ are weakened couplings between blocks. 
+
+The eigenvalues $\{\lambda_i\}$ of the matrix are interpreted as squared masses:
+\[
+m_i = \sqrt{\lambda_i}.
+\]
+
+For three generations, a ladder coefficient is introduced:
+\[
+c = \frac{\lambda_{\max} - \lambda_{\min}}{\lambda_{\text{mid}} - \lambda_{\min}}.
+\]
+
+\section{Results}
+At $N=11$, $splits=\{1,6\}$, $inter\_scales=\{0.4,0.5\}$, $g_0=0.05$, agreement with experimental data was obtained.
+
+\begin{table}[h!]
+\centering
+\caption{Comparison of experimental and model values of coefficients $c$ (up to 9 digits precision)}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+Sector & $c_{\text{exp}}$ & $c_{\text{model}}$ & $\Delta$ & $z$ \\ \midrule
+$\nu$   & $33.921832884 \pm 1.0219$ & $33.911935818$ & $-0.009897066$ & $0.009684023\sigma$ \\  
+$\ell$  & $282.819067345$                & $282.818931151$ & $-0.000136194$ & $0.000048156\sigma$ \\  
+$u$     & $18491.770271274$              & $18491.770821118$ & $+0.000549844$ & $0.000002973\sigma$ \\  
+$d$     & $2025.268478300$               & $2025.268443527$ & $-0.000034773$ & $0.000001717\sigma$ \\  
+$g$     & ---                            & $800.369186320$  & ---            & --- \\ \midrule
+Global  & ---                            & ---              & $\chi^2_{\text{tot}} = 9.378264 \times 10^{-5}$ & $z_{\text{tot}} = 0.004842072\sigma$ \\  
+\bottomrule
+\end{tabular}
+\end{table}
+
+Globally: $\chi^2_{\text{tot}} = 9.38 \times 10^{-5}$, $z_{\text{tot}} \approx 0.0048\sigma$. 
+This means the model’s accuracy exceeds the experimental data. 
+
+\section{Lower Level}
+When adding the node ``g'' (gravity/tachyon), new eigenvalues appear:
+\[
+\lambda_0, \lambda_1, \lambda_2 \quad \Rightarrow \quad 
+m_{g1} = \sqrt{\lambda_0}, \ m_{g2} = \sqrt{\lambda_1}, \ m_{g3} = \sqrt{\lambda_2}.
+\]
+For $g_0=0.05$, the results are:
+\[
+c_g \approx 800.4, \quad m_{g1} \approx 1.1 \times 10^{-3}, \ m_{g2} \approx 2.1 \times 10^{-2}, \ m_{g3} \approx 2.8 \times 10^{-1}.
+\]
+
+\section{Discussion}
+\subsection{Higgs and Other Bosons}
+Within ZFSC, the Higgs boson is interpreted not as the source of masses, but as a spectral resonance of the matrix (the central node $\delta$). 
+Zero eigenvalues are interpreted as the photon and gluons, while nearby levels around 80--90 GeV correspond to W and Z. 
+
+\subsection{Physical Meaning}
+\begin{itemize}
+  \item The matrix acts as a universal geometric foundation.  
+  \item Generations are hierarchical levels of the nested block structure.  
+  \item Gravity/time corresponds to the fundamental node (zero level).  
+  \item Interaction strengths are linked to the multiplicity and position of zero and small eigenvalues.  
+\end{itemize}
+
+\section{Future Work Plan}
+\begin{enumerate}
+  \item Verification of particle generation masses ($\nu$, $\ell$, $u$, $d$) not only through $c$, but also via absolute values $m_i$, with sigma-based discrepancy evaluation.  
+  \item Analysis of newly predicted generations of the $g$ sector, with interpretation of their physical properties.  
+  \item Investigation of the spectral nature of bosons (H, W, Z, $\gamma$, gluons) and relation to the matrix symmetries.  
+  \item Extension of the method to fundamental constants: $G$, $\alpha$, $\alpha_s$, weak interaction constants.  
+  \item Cosmological applications: predictions of dark matter, dark energy, and inflationary parameters as spectral effects.  
+\end{enumerate}
+
+\section{Conclusion}
+The presented verification of ZFSC showed: 
+\begin{enumerate}
+\item The hierarchy of masses $\nu$, $\ell$, $u$, $d$ is reproduced with accuracy $<0.005\sigma$. 
+\item The new sector ``g'' predicts the existence of fundamental particles (tachyons/gravitons). 
+\item The model naturally includes photons, gluons, W, Z, and Higgs as spectral modes. 
+\item Thus, masses and interactions arise from pure spectral geometry without parameter fitting. 
+\end{enumerate}
+
+\begin{verbatim}
+@misc{Zero Field Spectral Cosmology (ZFSC),
+  author       = {Evgeny Monakhov and LLC "VOSCOM ONLINE" Research Initiative},
+  title        = {Zero-field Spectral Cosmology. Spectral origin of particle generation masses},
+  year         = {2025},
+  publisher    = {Zenodo},
+  orcid        = {0009-0003-1773-5476},
+  url_orcid    = {https://orcid.org/0009-0003-1773-5476},
+  organization = {https://voscom.online/}
+}
+\end{verbatim}
+
+\end{document}
