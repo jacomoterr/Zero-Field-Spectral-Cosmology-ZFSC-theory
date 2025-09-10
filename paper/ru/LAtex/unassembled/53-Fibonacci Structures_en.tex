@@ -1,0 +1,183 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{bm}
+\usepackage{physics}
+\usepackage{siunitx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{geometry}
+\geometry{margin=2.3cm}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{positioning}
+
+\title{Fibonacci Structures and Pregeometry in Zero-Field Spectral Cosmology (ZFSC)}
+\author{Evgeny Monakhov \\ VOSCOM ONLINE Research Initiative \\ ORCID: 0009-0003-1773-5476}
+\date{September 2025}
+
+\begin{document}
+\maketitle
+
+\section*{Abstract}
+We propose an extension of the \emph{Zero-Field Spectral Cosmology} (ZFSC) framework by introducing quantization of geometry itself via Fibonacci matrices and quasiperiodic structures. We demonstrate that the golden ratio and Fibonacci sequences naturally emerge as stable scaling relations in spectral hierarchies. Moreover, these structures provide a natural route for reconstructing the pregeometric matrix through inverse spectral problems, directly anchored to experimental data on fermion masses and CKM/PMNS mixing. This enriches the theory with simplicity, beauty, and predictive consistency.
+
+\section{Introduction}
+ZFSC postulates the existence of a fundamental pregeometric level where both time and space are absent and entropy tends to zero:
+\[
+S \to 0.
+\]
+At this level, the Universe is described as a probabilistic amplitude field:
+\[
+\Psi = \sum_{i} a_i |i\rangle ,
+\]
+where $\{|i\rangle\}$ denote potential configurations and $a_i\in \mathbb{C}$ are their amplitudes.
+
+In the original formulation, geometry was treated as a fixed background for spectral modes. Here we propose an extension: quantizing geometry itself via \emph{Fibonacci matrices}. This provides an elegant unification between matter modes and structural stability based on universal mathematical sequences.
+
+\section{Fibonacci and the Golden Ratio as Universal Patterns}
+The Fibonacci sequence
+\[
+F_{n+1} = F_n + F_{n-1}, \qquad F_0=0, F_1=1,
+\]
+has the fundamental property:
+\[
+\lim_{n\to\infty} \frac{F_{n+1}}{F_n} = \varphi = \frac{1+\sqrt{5}}{2}.
+\]
+
+The golden ratio $\varphi$ arises in multiple domains:
+\begin{itemize}
+    \item growth spirals in biology and quasicrystals,
+    \item spectra of quasiperiodic Hamiltonians (Fibonacci chain, Aubry–André model),
+    \item hierarchical stability in dynamical systems.
+\end{itemize}
+
+In ZFSC, this ratio naturally emerges as the scaling law governing plateaus in the eigenvalue spectrum of the pregeometric matrix.
+
+\section{Fibonacci Matrices}
+A minimal generator of the Fibonacci sequence is:
+\[
+F = \begin{pmatrix} 1 & 1 \\ 1 & 0 \end{pmatrix}, \qquad
+F^n = \begin{pmatrix} F_{n+1} & F_n \\ F_n & F_{n-1} \end{pmatrix}.
+\]
+
+Extended constructions include:
+\begin{enumerate}
+    \item \textbf{Fibonacci Hamiltonian:}
+    \[
+    (H\psi)_n = \psi_{n+1} + \psi_{n-1} + V \chi_{\text{Fib}}(n)\psi_n ,
+    \]
+    where $\chi_{\text{Fib}}(n)$ encodes the Fibonacci substitution word.
+    \item \textbf{Golden graph Laplacian:} layered graphs with node counts $\sim F_n$ and vertex degree ratios $\deg_{L+1}/\deg_L \to \varphi$.
+    \item \textbf{q-Fibonacci deformations:} allowing deviations from exact $\varphi$ for modeling CKM/PMNS non-idealities.
+\end{enumerate}
+
+\section{Quantization of Geometry}
+We extend the state space:
+\[
+\Psi = \sum_{i,j} a_{ij}\, |i\rangle \otimes |j_{\text{geom}}\rangle ,
+\]
+where $|j_{\text{geom}}\rangle$ denotes quantized geometric states described by Fibonacci-type matrices.
+
+The total Hamiltonian becomes:
+\[
+H_{\text{tot}} = H_{\text{matter}} \otimes I + I \otimes H_{\text{geom}} + H_{\text{int}}.
+\]
+
+Stability condition:
+\[
+H_{\text{tot}} \Psi = \Lambda \Psi ,
+\]
+with $\Lambda$ encoding both matter and geometric spectra.
+
+\section{Inverse Spectral Problem}
+Given experimental data (fermion masses $\{m_k^{\rm exp}\}$, mixing matrices $U_{\rm CKM}, U_{\rm PMNS}$), we define the inverse problem:
+\[
+H_{\text{tot}} | \psi_k \rangle = \lambda_k | \psi_k \rangle, \qquad \lambda_k \equiv (m_k^{\rm exp})^2,
+\]
+with eigenvectors reproducing observed overlaps.
+
+This is an \emph{inverse eigenvalue problem}, well studied in the mathematics of Jacobi matrices. Parameterizing $H_{\text{geom}}$ by Fibonacci structures dramatically reduces the solution space.
+
+\section{Cosmic Age and Approximation Depth}
+The finite age of the Universe corresponds to a finite Fibonacci approximant depth. Let $n_*(t)$ denote the depth:
+\[
+n_*(t) = n_0 + \eta \log_{\varphi}\!\Big(\frac{a(t)}{a(t_{\rm ref})}\Big),
+\]
+where $a(t)$ is the scale factor.  
+Thus today’s cosmic time $t_0$ fixes $n_*(t_0)$, determining how far the golden ratio has been approximated in the pregeometric unfolding.
+
+\section{Practical Tests}
+We propose:
+\begin{enumerate}
+    \item Checking eigenvalue ratios $\lambda_{k+1}/\lambda_k$ against $\varphi$ across sectors ($u$, $d$, $\ell$, $\nu$).
+    \item Estimating fractal dimensions of the integrated density of states (IDOS) as a function of $V/J$.
+    \item Validating that $n_*(t_0)$ minimizes spectral fit error to experimental data.
+    \item Using q-Fibonacci deformations to model CKM/PMNS deviations.
+\end{enumerate}
+
+\section{Conclusion}
+Including Fibonacci structures in ZFSC:
+\begin{itemize}
+    \item naturally explains spectral plateau stability,
+    \item links experimental mass hierarchies to universal golden ratio scaling,
+    \item interprets cosmic age as a Fibonacci approximation depth,
+    \item formulates an inverse spectral reconstruction of pregeometry.
+\end{itemize}
+
+This extension enhances both elegance and predictive strength of ZFSC.
+
+\section{Comparison: ZFSC v1.0 vs ZFSC v2.0}
+
+To clarify the conceptual progress, we summarize the main differences between the first formulation of ZFSC and the extended version presented here.
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{@{}p{4cm}p{5.5cm}p{5.5cm}@{}}
+\toprule
+ & \textbf{ZFSC v1.0} & \textbf{ZFSC v2.0} \\
+\midrule
+\textbf{State space} & Only matter modes $|i_{\mathrm{matter}}\rangle$ & Tensor product of matter and quantized geometry $|i_{\mathrm{matter}}\rangle \otimes |j_{\mathrm{geom}}\rangle$ \\
+\textbf{Geometry} & Treated as fixed background & Quantized via Fibonacci, golden Laplacian, $q$-Fibonacci, fractal or random matrices \\
+\textbf{Parameters} & $(\Delta, r, g_L, g_R, h_1,h_2,h_3)$ & Extended: $(\Delta, r, g_L, g_R, h_1,h_2,h_3, \alpha, \beta, n_*(t))$ \\
+\textbf{Entanglement} & Not included & Explicit corrections $\Delta E_s = \alpha I_{AB} + \beta I_{\mathrm{intra}}$ \\
+\textbf{Cosmic age} & Not linked to spectrum & Encoded as Fibonacci approximation depth $n_*(t)$ \\
+\textbf{Inverse problem} & Forward-only computation of spectra & Inverse eigenvalue problem: reconstruct $H_{\mathrm{geom}}$ from experimental masses and mixing \\
+\textbf{Spectral law} & $d\lambda_n/dt = 0$ (stability) & Same, but applied to joint matter+geometry eigenvalues \\
+\bottomrule
+\end{tabular}
+\caption{Conceptual evolution of ZFSC from v1.0 to v2.0.}
+\end{table}
+
+\section{Advantages of ZFSC v2.0}
+\begin{itemize}
+    \item \textbf{Unification:} Matter and geometry are treated on equal footing as quantized states.  
+    \item \textbf{Flexibility:} Multiple candidate geometries (Fibonacci, random, fractal) can be tested within the same framework.  
+    \item \textbf{Observational anchoring:} Direct reconstruction from experimental data (fermion masses, CKM/PMNS).  
+    \item \textbf{Cosmological link:} The age of the Universe is naturally encoded as approximation depth $n_*(t)$ in Fibonacci scaling.  
+    \item \textbf{Testability:} The Fibonacci hypothesis becomes falsifiable: if nature does not favor golden-ratio quantization, the weight $c_{\mathrm{Fib}}$ vanishes.  
+\end{itemize}
+
+\section{Open Problems}
+\begin{enumerate}
+    \item \textbf{Numerical implementation:} Efficient algorithms for solving the inverse eigenvalue problem with large-scale matrices remain challenging.  
+    \item \textbf{Physical interpretation:} The exact meaning of negative eigenmodes (tachyons) and their role in cosmology needs clarification.  
+    \item \textbf{Entanglement parameters:} The constants $\alpha, \beta$ in $\Delta E_s$ require physical derivation or experimental constraint.  
+    \item \textbf{Cosmic evolution:} The precise mapping $n_*(t)$ from cosmological time to approximation depth must be calibrated with data (CMB, structure formation).  
+    \item \textbf{Universality:} Whether Fibonacci structures are unique, or just one possible realization among many quasiperiodic or fractal candidates.  
+    \item \textbf{Experimental signals:} Identifying direct experimental observables beyond fermion masses and mixing (e.g., subtle patterns in bosonic spectra).  
+\end{enumerate}
+
+
+\bibliographystyle{plain}
+\begin{thebibliography}{9}
+\bibitem{Suto} A. Sütő, \emph{The spectrum of a quasiperiodic Schrödinger operator}, Comm. Math. Phys. (1989).
+\bibitem{Damanik} D. Damanik, \emph{Fibonacci Hamiltonian}, in: Mathematics of Aperiodic Order (2015).
+\bibitem{AubryAndre} S. Aubry, G. André, \emph{Analyticity breaking and Anderson localization in incommensurate lattices}, Ann. Israel Phys. Soc. (1980).
+\end{thebibliography}
+
+\end{document}
