@@ -1,0 +1,18 @@
+Note on a possible Yukawa relation in Higgs measurements
+
+Dear ATLAS Higgs Working Group,
+
+While reviewing Higgs Yukawa coupling results, I noticed a simple empirical relation that may be testable with Run-3 data:
+
+δy_μ / y_μ ≈ δy_c / y_c
+
+This suggests that relative deviations of muon and charm Yukawas could be correlated in magnitude and sign. Since ATLAS is uniquely sensitive to both H→μμ and H→cc̄, this relation might be directly testable in future analyses.
+
+Please find attached a short one-page note with details.
+
+Best regards,
+Evgeny Monakhov
+Independent researcher
+VOSCOM ONLINE Research Initiative
+https://voscom.online/
+5022826@gmail.com

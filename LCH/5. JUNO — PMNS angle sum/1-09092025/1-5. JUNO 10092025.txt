@@ -1,0 +1,20 @@
+Note on a possible Yukawa relation in Higgs measurements
+
+Note on a simple empirical PMNS relation
+
+Dear JUNO Collaboration,
+
+I would like to share a simple empirical relation among PMNS mixing angles:
+
+sin^2(2θ_12) + sin^2(2θ_23) ≈ 1.
+
+With JUNO’s high precision on θ_12, combined with global data on θ_23, this relation could be tested with current or near-future results. If confirmed, it would suggest a hidden structural constraint in the lepton sector.
+
+Please find attached a short note.
+
+Sincerely,
+Evgeny Monakhov
+Independent researcher
+VOSCOM ONLINE Research Initiative
+https://voscom.online/
+5022826@gmail.com

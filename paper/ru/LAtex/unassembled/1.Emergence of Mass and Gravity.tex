@@ -1,0 +1,93 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{hyperref}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\title{Emergence of Mass and Gravity \\
+from the Probabilistic Field Hypothesis}
+\author{Evgeny Monakhov \\ VOSCOM Research Initiative}
+\date{September 2025}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We propose a mechanism in which mass and gravity are not introduced as independent postulates, but instead emerge as consequences of the spectral structure of a probabilistic field at zero entropy. Mass is interpreted as the ``frozen'' energy of individual modes, while gravity arises as the global distortion of the effective metric (the network of links) induced by the collective contribution of these modes. Toy-model formulas are presented, together with possible directions for verification.
+\end{abstract}
+
+%------------------------------------
+\section{Mass as Mode Energy}
+Within the hypothesis each mode of the graph has its own frequency:
+\[
+\omega_k = \sqrt{\lambda_k},
+\]
+where $\lambda_k$ are the eigenvalues of the Laplacian $L$ on the network of connections (CY-Links).
+
+The energy of a mode is
+\[
+E_k = \hbar \omega_k \left(n_k + \tfrac{1}{2}\right).
+\]
+
+When decohered into spacetime, this energy manifests as mass:
+\[
+m_k = \frac{E_k}{c^2}.
+\]
+
+Thus, mass is not fundamental but the realization of a mode's frozen energy.
+
+%------------------------------------
+\section{Mass Hierarchy}
+Nearly degenerate modes ($\omega_i \approx \omega_j \approx \omega_k$) may correspond to particle generations. Small splittings $\Delta\omega$ can lead to exponential differences in effective masses, consistent with observed hierarchies:
+\[
+m_i \sim \frac{\hbar \omega_i}{c^2}, 
+\qquad
+\Delta m \sim \exp(-\alpha \, \Delta \omega).
+\]
+
+%------------------------------------
+\section{Gravity as a Collective Effect}
+Spacetime emerges as a network of links. Masses (mode energies) alter the network structure, shifting the Laplacian spectrum. This is equivalent to curvature of the metric.
+
+The effective field equation reads
+\[
+R_{\mu\nu} - \tfrac{1}{2} R g_{\mu\nu} \;\;\sim\;\; 
+\sum_{k} \langle T_{\mu\nu}^{(k)} \rangle ,
+\]
+where $\langle T_{\mu\nu}^{(k)} \rangle$ denotes the contribution of mode $\omega_k$ to the local network structure.
+
+%------------------------------------
+\section{Gravitational Constant}
+The gravitational constant may be related to the collective spectral sum:
+\[
+G^{-1} \;\sim\; \sum_{k} \hbar \omega_k ,
+\]
+similar to how $G$ arises in string theories through compactified spectra. In this view, $G$ is not fundamental but an emergent parameter determined by the ensemble of unfolded modes.
+
+%------------------------------------
+\section{Interpretation}
+\begin{itemize}
+  \item Mass = energy of unfolded modes.
+  \item Mass hierarchy = effect of nearly degenerate modes.
+  \item Gravity = global network response (effective curvature) to the distribution of mode energies.
+  \item $G$ = collective constant, dependent on the spectral structure.
+\end{itemize}
+
+%------------------------------------
+\section{Possible Tests}
+\begin{enumerate}
+  \item Attempt to reproduce orders of magnitude of $m_{\rm Higgs}, \alpha, \alpha_s$ via the spectrum $\omega_k$.
+  \item Check stability of $G$ against spectral variations (compare with cosmological data on constancy of $G$).
+  \item Numerical spectral graph simulations to verify:
+  \begin{itemize}
+    \item appearance of triplets of nearly degenerate modes (three generations),
+    \item stabilization of $D_{\rm eff}\approx 3$,
+    \item suppression of $\rho_\Lambda$ with entropy growth.
+  \end{itemize}
+\end{enumerate}
+
+%------------------------------------
+\section{Conclusion}
+In the probabilistic field hypothesis, mass and gravity emerge naturally from the spectral structure, rather than being separate axioms. Mass arises as frozen energy of individual modes, while gravity is the collective distortion of the emergent metric. This framework opens the possibility of viewing fundamental constants as derivatives of a deeper probabilistic structure.
+\end{document}
