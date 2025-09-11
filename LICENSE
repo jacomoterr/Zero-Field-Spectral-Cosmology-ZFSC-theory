@@ -1,0 +1,19 @@
+License for Zero-Field Spectral Cosmology (ZFSC)
+This project is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0). To view the full license, visit http://creativecommons.org/licenses/by-nc/4.0/.
+This license applies to all textual content, including LaTeX source files (paper/), slides, and documentation in this repository. Any software or code (if added) may be licensed separately, as specified in the relevant files.
+For commercial use inquiries or patent licensing, please contact:
+
+Evgeny Monakhov
+Email: evgeny.monakhov@voscom.online
+ORCID: 0009-0003-1773-5476
+https://orcid.org/0009-0003-1773-5476
+
+Organization: LCC "VOSCOM ONLINE"
+site:https://zfsc.voscom.online/
+---
+Citation: When using or referencing this work, please cite it as specified in the CITATION.cff file or as:
+Monakhov, Evgeny. (2025). Probabilistic Field Theory of Spacetime. Zenodo.
+
+Support: To support the development of ZFSC, see donation options (including bank transfer via Alfa-Bank and Bitcoin) in the README.md.
+Monakhov, Evgeny. (2025). Probabilistic Field Theory of Spacetime. Zenodo.
+Disclaimer: The materials in this repository are provided "as is," without warranty of any kind, express or implied. The author is not liable for any damages or consequences arising from the use of this work.
