@@ -1,0 +1,118 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{geometry}
+\geometry{margin=2cm}
+
+% --- Шрифты CERN-style (стандарт LaTeX) ---
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\setmainfont{CMU Serif}        % полный набор: кириллица+латиница
+\setmathfont{Latin Modern Math}  % формулы
+
+\usepackage{mathtools}
+\usepackage{physics}
+\everymath{\displaystyle}
+
+\title{ZFSC: План работ по подтверждени теории.\\ Часть 1. Вычислительные подтверждения \\ констант микромира.}
+\author{Евгений Монахов}
+\date{}
+
+
+\begin{document}
+\maketitle
+
+\section*{Стратегическая цель}
+Доказать Zero-Field Spectral Cosmology (ZFSC) через микромир:
+\begin{itemize}
+  \item массы поколений частиц,
+  \item матрицы смешивания CKM/PMNS,
+  \item силы взаимодействий,
+  \item строгое геометрическое определение постоянной тонкой структуры $\alpha$.
+\end{itemize}
+Главный ориентир №1: вывести $\alpha$ как геометрический инвариант без подгонки.
+
+---
+
+\section*{Этап A. Базовая матрица $H$ и сектора}
+\begin{enumerate}
+  \item Построить $H$ (размер $N\times N$, параметры $\Delta,r,g_L,g_R,h_1,h_2,h_3$).
+  \item Сектора ($u,d,\ell,\nu$) как геометрические трансформации $H$.
+  \item Собственные значения $\lambda_n(H_s)\to$ массы: $m_n^{(s)}=c_s\cdot \lambda_n(H_s)$.
+  \item Критерий: устойчивые топ-3 собственных значений для поколений.
+\end{enumerate}
+
+\textit{По-человечески:}  
+Мы проверяем, что базовая матрица $H$ порождает три устойчивых значения,
+которые можно трактовать как массы поколений частиц.
+
+---
+
+\section*{Этап B. Смешивание CKM и PMNS}
+\[
+  \mathrm{CKM} = U_u^\dagger U_d, 
+  \qquad
+  \mathrm{PMNS} = U_\ell^\dagger U_\nu .
+\]
+
+\textit{По-человечески:}  
+Берём собственные векторы из разных секторов.  
+Если они чуть расходятся, рождаются матрицы смешивания.  
+Мы ждём малые углы для CKM и большие углы для PMNS.
+
+---
+
+\section*{Этап C. Силы взаимодействий}
+\begin{itemize}
+  \item Связность слоёв $\to$ группы $SU(3),SU(2),U(1)$.
+  \item Эффективные константы: $g_i \propto f(\text{связность})$.
+  \item Критерий: правильные порядки отношений $(g_3:g_2:g_1)$ на шкале $\mu_{\mathrm{geo}}$.
+\end{itemize}
+
+---
+
+\section*{Этап D. Геометрическое $\alpha$}
+Ищем инвариант $\mathcal{I}$ такой, что
+\[
+\alpha^{-1} = \mathcal{F}(\text{геометрия матрицы $H$ и слоёв}).
+\]
+
+Главная цель — получить $1/\alpha \approx 137$ без подгонки.
+
+---
+
+\section*{Этап E. Верификация}
+\begin{itemize}
+  \item Сравнить с $\alpha^{-1}(0)\approx 137.036$ и $\alpha^{-1}(M_Z)\approx 127.95$.
+  \item Проверить устойчивость: $N$, шум $\pm 1\%$, разные граничные условия.
+  \item Критерий: $\alpha^{-1}$ остаётся в $137.0 \pm 0.3$.
+\end{itemize}
+
+---
+
+\section*{Этап F. Контрольные тесты}
+\begin{itemize}
+  \item Универсальность по секторам.
+  \item Сходимость при росте $N$.
+  \item Робастность к шумам.
+  \item Независимость от нормировок.
+\end{itemize}
+
+---
+
+\section*{Этап G. Мини-таймлайн}
+\begin{enumerate}
+  \item \textbf{Итерация 1 (3--5 дней):} спектры, черновые CKM/PMNS, первые $\alpha$.
+  \item \textbf{Итерация 2 (5--7 дней):} устойчивость, выбор лучших кандидатов $\alpha$.
+  \item \textbf{Итерация 3 (5--7 дней):} финальный отчёт.
+\end{enumerate}
+
+---
+
+\section*{Выходные артефакты}
+\begin{itemize}
+  \item CSV со спектрами по секторам.
+  \item CSV с углами CKM/PMNS.
+  \item CSV с кандидатами $\alpha$.
+  \item PDF-отчёт: формула, стабильность, шкала.
+\end{itemize}
+
+\end{document}

@@ -1,0 +1,64 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+% Языки
+\usepackage[russian,english]{babel}
+
+% --- Шрифты ---
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\setmainfont{CMU Serif}          % текст (кириллица + латиница)
+\setmathfont{Latin Modern Math}  % строгие формулы
+
+% --- Математика ---
+\usepackage{amsmath}
+\usepackage{braket}
+\everymath{\displaystyle}
+\emergencystretch=2em
+
+\title{Note on a Simple Timing Invariant in CMS LLP Searches}
+\author{}
+\date{\today}
+
+\begin{document}
+\maketitle
+\selectlanguage{english}
+
+Dear CMS Exotica Group,
+
+This short note highlights a model-agnostic timing pattern for long-lived particles (LLPs). Consider the linear combination
+\[
+X \equiv t - \alpha\, d_0,
+\]
+where $t$ is the reconstructed time-of-arrival (e.g., ECAL timing) and $d_0$ is the transverse impact parameter of the associated track or displaced vertex proxy. The empirical claim is:
+
+\[
+\mathrm{Var}\!\left(X\right) \ \text{is minimized at the same}\ \alpha^\star \ \text{across different LLP topologies.}
+\]
+
+\section*{How it can be tested with CMS Run-3 data}
+\begin{itemize}
+  \item \textbf{Samples:} use existing LLP-enriched selections (EXO/LLP triggers or displaced-track/vertex categories) in Run-3.
+  \item \textbf{Reconstruction:} per-candidate $t$ from ECAL time-of-arrival (after standard timing calibrations and path-length/TOF corrections); $d_0$ from tracker track or displaced-vertex fit (choose a consistent proxy when no single track is available).
+  \item \textbf{Binning:} split by topology (displaced leptons, displaced jets, delayed photons, etc.) and by kinematics ($p_T$, $\eta$) to control trivial kinematic effects.
+  \item \textbf{Fit:} for each bin, scan $\alpha$ and find the $\alpha^\star$ minimizing $\mathrm{Var}(t-\alpha d_0)$; propagate uncertainties with bootstrapping and include timing/tracking systematics.
+  \item \textbf{Universality check:} test whether $\alpha^\star$ is consistent across LLP classes and bins; compare to control regions dominated by SM backgrounds (cosmics, beam-halo, out-of-time pileup).
+  \item \textbf{Robustness:} repeat with alternative $t$ definitions (cluster time vs. seed time) and with per-candidate $\beta$ corrections (when available) to verify stability.
+\end{itemize}
+
+\section*{Why this may be important}
+\begin{itemize}
+  \item \textbf{Model-agnostic discriminant:} a common $\alpha^\star$ provides a simple observable for LLP selections, potentially improving $S/B$ without assuming a specific LLP model.
+  \item \textbf{Systematics cross-check:} universality of $\alpha^\star$ across categories is a nontrivial coherence pattern; its absence in background regions helps validate timing/tracking systematics.
+  \item \textbf{Search reach:} if confirmed, $X=t-\alpha^\star d_0$ can be added to multivariate LLP taggers as a physically interpretable feature.
+\end{itemize}
+
+\bigskip
+Sincerely, \\
+Evgeny Monakhov \\
+Independent Researcher \\
+VOSCOM ONLINE \\
+evgeny.monakhov@voscom.online
+
+\end{document}

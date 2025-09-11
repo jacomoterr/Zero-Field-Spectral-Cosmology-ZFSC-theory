@@ -1,0 +1,59 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+% Языки
+\usepackage[russian,english]{babel}
+
+% --- Шрифты ---
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\setmainfont{CMU Serif}          % текст (кириллица + латиница)
+\setmathfont{Latin Modern Math}  % строгие формулы
+
+% --- Математика ---
+\usepackage{amsmath}
+\usepackage{braket}
+\everymath{\displaystyle}
+\emergencystretch=2em
+
+\title{Note on a Scaling Relation in ALICE Charm Hadronization}
+\author{}
+\date{\today}
+
+\begin{document}
+\maketitle
+\selectlanguage{english}
+
+Dear ALICE Heavy-Flavor Group,
+
+We suggest a simple baryon--meson scaling involving charm hadrons in Pb--Pb collisions:
+\[
+v_2(\Lambda_c) - v_2(D^0) \ \propto\  \log\!\left(\frac{\Lambda_c}{D^0}\right),
+\]
+where $\Lambda_c/D^0$ is the yield ratio in the same $(p_T,\,$centrality$)$ bin. The proportionality factor is expected to be slowly varying with centrality.
+
+\section*{How it can be tested on existing ALICE data}
+\begin{itemize}
+  \item \textbf{Inputs:} published $v_2$ measurements for $D^0$ and $\Lambda_c$ vs. $p_T$ and centrality at $\sqrt{s_{NN}}=5.02$ TeV; corresponding $\Lambda_c/D^0$ yield ratios in matched bins.
+  \item \textbf{Binning and matching:} harmonize centrality and $p_T$ binning; when necessary, interpolate within published ranges with conservative systematics.
+  \item \textbf{Correlation test:} for each bin, compute $\Delta v_2 \equiv v_2(\Lambda_c)-v_2(D^0)$ and $Y \equiv \log(\Lambda_c/D^0)$. Perform a linear fit $\Delta v_2 = A + B\,Y$ with full covariance of statistical and systematic uncertainties.
+  \item \textbf{Cross-checks:} repeat for different centrality classes; verify that the slope $B$ is stable within uncertainties. Compare to $p$--Pb and $pp$ baselines (where coalescence is weaker) as a control.
+  \item \textbf{Systematics:} test sensitivity to feed-down, selection efficiencies, and non-flow corrections; the relation should persist within combined uncertainties if it is genuine.
+\end{itemize}
+
+\section*{Why this may be important}
+\begin{itemize}
+  \item \textbf{Universality hint:} a logarithmic link between baryon/meson composition and elliptic flow would indicate a common underlying mechanism (e.g., coalescence-driven degrees of freedom) governing both hadronization and collectivity for charm.
+  \item \textbf{Model constraints:} such scaling can discriminate between fragmentation-dominated and coalescence-dominated pictures and reduce parameter degeneracies in heavy-flavor transport models.
+  \item \textbf{Compact observable:} $\Delta v_2$ vs. $\log(\Lambda_c/D^0)$ gives a one-curve summary across centralities and $p_T$ that is easy to compare with theoretical calculations.
+\end{itemize}
+
+\bigskip
+Best regards, \\
+Evgeny Monakhov \\
+Independent Researcher \\
+VOSCOM ONLINE \\
+evgeny.monakhov@voscom.online
+
+\end{document}
