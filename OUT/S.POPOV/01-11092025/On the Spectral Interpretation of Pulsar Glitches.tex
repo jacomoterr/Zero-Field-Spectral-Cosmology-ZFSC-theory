@@ -1,0 +1,71 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+% Языки
+\usepackage[russian,english]{babel}
+
+% --- Шрифты ---
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\setmainfont{CMU Serif}
+\setmathfont{Latin Modern Math}
+
+% --- Математика ---
+\usepackage{amsmath}
+\everymath{\displaystyle}
+\emergencystretch=2em
+
+\begin{document}
+
+\title{On the Spectral Interpretation of Pulsar Glitches}
+\author{Evgeny Monakhov \\ Independent Researcher \\ VOSCOM ONLINE}
+\date{}
+\maketitle
+
+\section*{Abstract}
+We suggest a phenomenological interpretation of pulsar glitches in terms of discrete transitions between quasi-stable configurations of a neutron star. This approach yields a simple relation between the fractional change of spin frequency and the effective moment of inertia, and may explain both the suddenness and repeatability of glitches without detailed microphysical assumptions.
+
+\section*{1. Introduction}
+Pulsar glitches --- sudden spin-ups of rotating neutron stars --- remain one of the most puzzling phenomena in neutron star astrophysics. Standard explanations involve vortex unpinning in superfluid interiors or crustal quakes. However, both approaches face difficulties in explaining the sharpness and recurrence of glitches.
+
+Here we present an alternative, purely phenomenological view: glitches arise from transitions between discrete stable states of the star, characterized by different effective moments of inertia.
+
+\section*{2. Basic relation}
+Let the star rotate with angular velocity $\Omega$ and effective moment of inertia $I$. Conservation of angular momentum gives
+\[
+L = I \, \Omega = \text{const}.
+\]
+
+If the system undergoes a sudden transition $I \to I + \Delta I$, then
+\[
+\frac{\Delta \Omega}{\Omega} \;\approx\; -\, \frac{\Delta I}{I}.
+\]
+
+This simple expression directly connects the observed fractional glitch size $\Delta \Omega / \Omega$ with a discrete shift in $I$.
+
+\section*{3. Interpretation}
+In this picture:
+\begin{itemize}
+  \item A glitch is not a continuous process, but a jump between quasi-stable configurations.
+  \item The existence of multiple ``spectral plateaux'' for $I$ can explain the observed recurrence of glitches.
+  \item The distribution of glitch sizes may reflect the spacing between these plateaux.
+\end{itemize}
+
+\section*{4. Discussion}
+This approach does not depend on detailed assumptions about nuclear superfluidity, vortex pinning, or crustal dynamics. Instead, it treats the neutron star as a system with quantized global states. The sharpness of glitches arises naturally, as the system tunnels or shifts between states.
+
+\section*{5. Conclusion}
+The relation
+\[
+\frac{\Delta \Omega}{\Omega} \;\approx\; -\, \frac{\Delta I}{I}
+\]
+offers a phenomenological handle on glitches as transitions between discrete global configurations. Further statistical comparison with observed glitch distributions could test this hypothesis.
+
+\vspace{2em}
+\noindent
+\textit{Evgeny Monakhov} \\
+Independent Researcher \\
+VOSCOM ONLINE
+
+\end{document}
