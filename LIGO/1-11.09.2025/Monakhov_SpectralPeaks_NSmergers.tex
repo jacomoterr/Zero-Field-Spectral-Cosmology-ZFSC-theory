@@ -1,0 +1,70 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+% Language
+\usepackage[english]{babel}
+
+% Fonts
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\setmainfont{CMU Serif}
+\setmathfont{Latin Modern Math}
+
+% Math
+\usepackage{amsmath}
+\everymath{\displaystyle}
+\emergencystretch=2em
+
+\begin{document}
+
+\noindent
+To the LIGO Scientific Collaboration \\
+to the Virgo Collaboration \\
+to the KAGRA Collaboration \\[2ex]
+
+\noindent
+\textbf{Subject: Proposal to search for additional spectral peaks in neutron star merger signals} \\[2ex]
+
+Dear Colleagues,
+
+Recent analyses of neutron star mergers (e.g., GW170817 and subsequent NS--NS events) have provided unprecedented insights into the dense-matter equation of state. We would like to draw your attention to a potential feature that may be hidden in the gravitational-wave data.
+
+Our spectral view of dense matter suggests that, beyond the classical inspiral ``chirp'' and the dominant post-merger ringdown, there may exist \emph{additional narrow spectral peaks} associated with internal transitions between quasi-stable states of ultra-dense matter. To keep this suggestion strictly phenomenological and model-agnostic, we outline below a minimal signature that could be searched for without committing to a particular microphysical model.
+
+\paragraph{Phenomenological signature (model-agnostic).}
+Let $h_{\rm GR}(t)$ denote the baseline general-relativistic waveform (inspiral + merger + dominant ringdown). We suggest testing the augmented ansatz
+\[
+h(t) \;=\; h_{\rm GR}(t) \;+\; \sum_{k=1}^{K} A_k\, e^{-t/\tau_k}\,\sin\!\bigl(2\pi f_k\, t + \phi_k \bigr)\, \Theta(t-t_0),
+\]
+with corresponding frequency-domain excess power modeled by a sum of (damped-mode) Lorentzians,
+\[
+S_h(f) \;=\; S_{h,{\rm GR}}(f) \;+\; \sum_{k=1}^{K} \frac{H_k}{1 + Q_k^2 \bigl(\tfrac{f}{f_k} - \tfrac{f_k}{f}\bigr)^2}\,,
+\]
+where $f_k$ are narrow peaks near (but distinct from) the dominant post-merger frequency $f_{\rm RD}$, $\tau_k$ are damping times, $Q_k \!=\! \pi f_k \tau_k$ are quality factors, and $H_k$ are peak heights. The Heaviside step $\Theta$ and onset time $t_0$ allow both late-inspiral (pre-merger micro-oscillations) and early post-merger excitation.
+
+\paragraph{Search ranges (practical guidance).}
+\begin{itemize}
+  \item \textbf{Frequencies:} $f_k \in \bigl[0.7,\,1.4\bigr]\times f_{\rm RD}$ (typically in the $\sim\!1$--$4$ kHz band for NS--NS).
+  \item \textbf{Quality factors:} $Q_k \sim 5$--$50$ (narrow but resolvable with current PSD integration times).
+  \item \textbf{Durations:} $\tau_k \sim 5$--$100$ ms (short-lived post-merger ``breathing'' modes), with an allowance for subdominant pre-merger activity within the last $\sim\!100$ ms of inspiral.
+  \item \textbf{Amplitudes:} $A_k$ (or $H_k$) $\ll$ dominant mode; persistence across multiple events would be the key discriminator vs. noise.
+\end{itemize}
+
+We suggest a targeted spectral re-analysis of existing NS--NS events (GW170817, GW190425, etc.) with:
+(i) multi-resolution time-frequency methods (wavelet dictionaries, Prony/ESPRIT); 
+(ii) constrained matched filtering against the above damped-sinusoid augmentations; 
+(iii) cross-event stacking in normalized frequency units $f/f_{\rm RD}$ to enhance weak, reproducible peaks.
+
+Even marginal evidence of such peaks---if consistent across events and instruments---would provide a new observable connecting gravitational-wave astronomy with the microphysics of supranuclear matter.
+
+We would be grateful if the collaborations could consider this line of analysis. We remain available to clarify the phenomenology and parameter ranges if useful.
+
+With respect and best regards, \\[2ex]
+
+Evgeny Monakhov \\
+Independent Researcher \\
+VOSCOM ONLINE \\
+evgeny.monakhov@voscom.online
+
+\end{document}
