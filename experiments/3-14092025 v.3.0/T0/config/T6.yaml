@@ -1,0 +1,36 @@
+version: "3.0.5"
+config_code: "M4ZK2QW8R1NY7V3PL0DX"
+
+run:
+  # Размерности — мягкая лесенка, чтобы не упереться в кубическую сложность eigh
+  sizes: [21, 33, 41, 49, 57, 65]
+  # Несколько сидов для усреднения (без подгонки!)
+  seeds: [101, 102, 103, 104, 105]
+  # k_eigs зарезервировано (сейчас полные eigh)
+  k_eigs: null
+
+geometry:
+  kind: "grid"
+  params:
+    dim: 2
+    bc: "periodic"
+
+operators:
+  lotus_gamma: 0.0
+  vacuum_kappa:
+    gr: 0.0
+    em: 0.0
+    wk: 0.0
+    st: 0.0
+  radial_zeta:
+    levels: 3
+    strength: 1.0
+  mixing_eta: 0.0
+  stabilizer_beta: 0.2
+  cycles_delta: 0.0
+  mu_shift: 0.0
+
+checks:
+  tol: 1.0e-2
+  min_width: 2
+  gap_to_mode: 4

@@ -1,0 +1,66 @@
+VERSION: "3.1.0"
+PROGRAM_HASH: "T3C9-EXAMPLE-0001"
+CONFIG_VERSION: "3.1.0"
+CONFIG_HASH: "CFG-EXAMPLE-9A7D"
+
+runs_root: "runs/TALL"
+sizes: [33, 49, 65, 81, 97]
+seeds: [101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120]
+sampling:
+  points: 512       # удвоенный LHS
+
+
+sampling:
+  scheme: "lhs"
+  points: 512
+  random_seed: 31415
+
+umbrella:
+  alpha: [0.5, 2.0]
+  kappa: [0.0, 0.06]
+  steps:
+    N_steps: [0,1,2,3]
+    r_over_R: [0.33, 0.66, 0.82]
+    h_range: [0.0, 0.6]
+    w_range: [0.5, 2.5]
+  anisotropy:
+    m_choices: [4, 8]
+    epsilon: [0.0, 0.06]
+    alpha_theta: 1.0
+  edge: ["soft", "med", "hard"]
+
+lotus_fix:
+  gamma: [0.01, 0.10]
+  beta:  [0.005, 0.06]
+
+reservoir:
+  kappa_gr: [0.0, 0.05]
+  kappa_em: [0.0, 0.05]
+  kappa_wk: [0.0, 0.05]
+  kappa_st: [0.0, 0.05]
+
+confinement:
+  belts: 3
+  zeta_range: [0.0, 0.25]
+
+knot:
+  eta: [0.0, 0.08]
+  locality_g: [1,2]
+
+cycles:
+  delta: [0.0, 0.08]
+  P_choices: [8,16,32,64]
+
+cp_link:
+  epsilon_tau: [0.0, 0.02]
+  phi_tau: [-0.1, 0.1]
+
+filters:
+  plateau_min_width: 2
+
+outputs:
+  save_overlaps: true
+  save_localization: true
+  save_angular_splits: true
+  save_scaling: true
+  write_plots: false

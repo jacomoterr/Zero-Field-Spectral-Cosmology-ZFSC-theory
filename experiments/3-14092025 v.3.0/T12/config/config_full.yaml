@@ -1,0 +1,88 @@
+CONFIG_VERSION: "3.3-universal"
+CONFIG_HASH: "CFG-UNIVERSAL-20250916"
+
+runs_root: "runs"
+run_mode: "adaptive"   # можно переключить на "stress_only"
+
+# --- Размеры и сиды ---
+sizes: [64, 104, 128, 140, 164, 168, 192, 204, 228]
+seeds: [42, 123, 777, 2025]
+
+# --- Сэмплинг ---
+sampling:
+  points: 3000
+
+# --- Adaptive параметры ---
+adaptive:
+  max_levels: 15
+  points_mult: 0.5
+  N_step: 4
+  n_probe_step: 1
+  sigma_mult: 1.5
+
+# --- Stability ---
+stability:
+  q_min: 3.0
+  n_probe: 1
+  sigma: 1e-5
+
+# --- Фильтры плато ---
+filters:
+  plateau_min_width: 2
+  plateau_tau: 0.35
+
+# --- Hotspot фильтры ---
+hotspots:
+  K_min: 20
+  gap_ratio_min: 100.0
+  shell_purity_min: 2.0
+  plateau_persistence_min: 0.35
+  topk_level: [1000, 200, 50, 20]
+
+# --- Параллелизация ---
+parallel:
+  N_JOBS: 8   # или -1 для всех ядер
+
+# --- Ablation режимы ---
+ablation:
+  modes:
+    - {}                # baseline
+    - {mixing: false}
+    - {cycles: false}
+    - {snail: false}
+    - {reservoir: false}
+    - {dual: false}
+
+# --- Shells ---
+shells:
+  method: "mult_median"
+  shell_min_size: 2
+  mult: 2.5
+  percentile: 90.0
+
+# --- Визуализация ---
+viz:
+  enabled: false
+  resonance_map: false
+  shell_hist: false
+  scaling_num_plateaus: false
+
+# --- Stress-test ---
+stress:
+  enabled: true
+  n_probe_list: [5, 10, 20, 50, 100, 200]
+  sigma_list: [1e-6, 5e-6, 1e-5, 5e-5, 1e-4, 5e-4, 1e-3]
+  viz: true
+
+# --- Hotspots вручную (для stress_only) ---
+hotspots_manual:
+  - {N: 164, seed: 777, point: 9420, ablation_id: 5}
+  - {N: 228, seed: 777, point: 9856, ablation_id: 4}
+  - {N: 100, seed: 777, point: 1251, ablation_id: 4}
+  - {N: 204, seed: 123, point: 2321, ablation_id: 0}
+  - {N: 100, seed: 777, point: 7453, ablation_id: 0}
+  - {N: 140, seed: 123, point: 5755, ablation_id: 3}
+  - {N: 140, seed: 123, point: 9365, ablation_id: 2}
+  - {N: 204, seed: 777, point: 6789, ablation_id: 4}
+  - {N: 140, seed: 42,  point: 2918, ablation_id: 4}
+  - {N: 140, seed: 777, point: 4370, ablation_id: 0}

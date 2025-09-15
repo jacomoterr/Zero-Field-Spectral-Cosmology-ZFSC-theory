@@ -1,0 +1,31 @@
+version: "3.0.4"
+config_code: "L2N7XK9PQ84VY3DRM5ZT"
+
+run:
+  seed: 1337
+  sizes: [21, 33]
+
+geometry:
+  kind: "grid"
+  params:
+    dim: 2
+    bc: "periodic"
+
+operators:
+  lotus_gamma: 0.0
+  vacuum_kappa:
+    gr: 0.0
+    em: 0.0
+    wk: 0.0
+    st: 0.0
+  radial_zeta:
+    levels: 3
+    strength: 1.0
+  mixing_eta: 0.0
+  stabilizer_beta: 0.2
+  cycles_delta: 0.0
+  mu_shift: 0.0
+
+checks:
+  noise_connectivity: 0.05
+  gap_to_mode: 4

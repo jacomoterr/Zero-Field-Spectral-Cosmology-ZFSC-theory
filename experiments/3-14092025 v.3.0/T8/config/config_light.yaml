@@ -1,0 +1,64 @@
+VERSION: "3.1.1"
+PROGRAM_HASH: "T3C9-EXAMPLE-0001"
+CONFIG_VERSION: "3.1.1-demo"
+CONFIG_HASH: "CFG-DEMO-1234"
+
+runs_root: "runs/TALL"
+sizes: [33]
+seeds: [101,102,103,104]
+
+sampling:
+  scheme: "lhs"
+  points: 8
+  random_seed: 42
+
+umbrella:
+  alpha: [0.8, 1.5]
+  kappa: [0.0, 0.05]
+  steps:
+    N_steps: [0,1,2]
+    r_over_R: [0.33, 0.66]
+    h_range: [0.05, 0.3]
+    w_range: [0.5, 2.0]
+  anisotropy:
+    m_choices: [4, 8]
+    epsilon: [0.0, 0.05]
+    alpha_theta: 1.0
+  edge: ["soft","hard"]
+
+lotus_fix:
+  gamma: [0.05, 0.2]
+  beta:  [0.01, 0.05]
+
+reservoir:
+  kappa_gr: [0.0]
+  kappa_em: [0.0]
+  kappa_wk: [0.0]
+  kappa_st: [0.0]
+
+confinement:
+  belts: 3
+  zeta_range: [0.05, 0.2]
+
+knot:
+  eta: [0.0, 0.05]
+  locality_g: [1]
+
+cycles:
+  delta: [0.0, 0.05]
+  P_choices: [8,16]
+
+cp_link:
+  epsilon_tau: [0.0]
+  phi_tau: [0.0]
+
+filters:
+  plateau_min_width: 2
+  plateau_tau: 1.0   # мягче критерий для поиска плато
+
+outputs:
+  save_overlaps: false
+  save_localization: false
+  save_angular_splits: false
+  save_scaling: false
+  write_plots: false
